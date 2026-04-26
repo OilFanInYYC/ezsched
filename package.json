@@ -1,0 +1,29 @@
+{
+  "name": "ezsched",
+  "version": "1.0.0",
+  "description": "A simple scheduling program for booking time slots",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon -e js,ejs app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OilFanInYYC/ezsched.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OilFanInYYC/ezsched/issues"
+  },
+  "homepage": "https://github.com/OilFanInYYC/ezsched#readme",
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

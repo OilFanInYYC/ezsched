@@ -9,6 +9,8 @@ services:
       MARIADB_USER: ${MARIADB_USER}
       MARIADB_PASSWORD: ${MARIADB_PASSWORD}
       MARIADB_DATABASE: ${MARIADB_DB}
+    volumes:
+      - mariadb-data:/var/lib/mysql
   adminer:
     image: adminer
     hostname: adminer
@@ -17,7 +19,8 @@ services:
     ports:
       - 8080:8080
   ezsched:
-    image: ezsched
+    build: .
+    image: OilFanInYYC/ezsched
     hostname: ezsched
     container_name: ezsched
     restart: always
@@ -30,3 +33,7 @@ services:
       MARIADB_USER: ${MARIADB_USER}
       MARIADB_PASSWORD: ${MARIADB_PASSWORD}
       MARIADB_DATABASE: ${MARIADB_DB}
+      EXPRESS_SESSION_SECRET: ${EXPRESS_SESSION_SECRET}
+
+volumes:
+  mariadb-data:

@@ -2,28 +2,36 @@
   "name": "ezsched",
   "version": "1.0.0",
   "description": "A simple scheduling program for booking time slots",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon -e js,ejs app.js"
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=development -e js,json,yml,mjs,cjs,ejs app"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OilFanInYYC/ezsched.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Zsolt Munoz <zmunoz@gmail.com>",
+  "license": "GPL-3.0-only",
   "bugs": {
     "url": "https://github.com/OilFanInYYC/ezsched/issues"
   },
   "homepage": "https://github.com/OilFanInYYC/ezsched#readme",
   "dependencies": {
+    "@azure/msal-node": "^5.1.4",
+    "axios": "^1.15.2",
+    "body-parser": "^2.2.2",
+    "cookie-parser": "^1.4.7",
+    "cookie-session": "^2.1.1",
+    "dotenv": "^17.4.2",
     "ejs": "^5.0.2",
     "express": "^5.2.1",
+    "express-session": "^1.19.0",
     "mysql2": "^3.22.2"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.14"
   }
 }
